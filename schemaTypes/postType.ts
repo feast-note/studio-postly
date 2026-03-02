@@ -12,11 +12,6 @@ export const postType = defineType({
       to: [{type: 'user'}],
     }),
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    }),
-    defineField({
       name: 'color',
       title: 'Color',
       type: 'string',
@@ -55,6 +50,18 @@ export const postType = defineType({
           type: 'string',
         }),
       ],
+    }),
+    defineField({
+      name: 'width',
+      title: 'Width',
+      type: 'number',
+      initialValue: 240,
+    }),
+    defineField({
+      name: 'height',
+      title: 'Height',
+      type: 'number',
+      initialValue: 240,
     }),
   ],
 })
