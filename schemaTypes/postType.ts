@@ -37,21 +37,6 @@ export const postType = defineType({
       type: 'date',
     }),
     defineField({
-      name: 'position',
-      title: 'Position',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'x',
-          type: 'string',
-        }),
-        defineField({
-          name: 'y',
-          type: 'string',
-        }),
-      ],
-    }),
-    defineField({
       name: 'width',
       title: 'Width',
       type: 'number',
