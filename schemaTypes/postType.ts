@@ -36,17 +36,5 @@ export const postType = defineType({
       title: 'Expire',
       type: 'date',
     }),
-    defineField({
-      name: 'width',
-      title: 'Width',
-      type: 'number',
-      initialValue: 240,
-    }),
-    defineField({
-      name: 'height',
-      title: 'Height',
-      type: 'number',
-      initialValue: 240,
-    }),
   ],
 })
