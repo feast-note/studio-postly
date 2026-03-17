@@ -10,6 +10,17 @@ export const postType = defineType({
       name: 'author',
       type: 'reference',
       to: [{type: 'user'}],
+      hidden: ({document}) => document?.guestMode === true,
+      validation: (rule) =>
+        rule.custom((value, context) =>
+          !context?.document?.guestMode ? true : value ? true : 'Author is required',
+        ),
+    }),
+    defineField({
+      name: 'guestMode',
+      title: 'GuestMode',
+      type: 'boolean',
+      initialValue: false,
     }),
     defineField({
       name: 'color',
